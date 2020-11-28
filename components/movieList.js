@@ -1,4 +1,6 @@
 import React from 'react'
+import Link from 'next/link'
+
 
 class MovieList extends React.Component {
 
@@ -11,17 +13,21 @@ class MovieList extends React.Component {
         }
     }
 
-    renderMovies(movies) {   
+    renderMovies(movies) {
         // Returns all movie elements
         return movies.map(movie =>
             (
                 // Always specify key property when iterating through a list
                 <div key={movie.id} className="col-lg-4 col-md-6 mb-4">
                     <div className="card h-100">
-                        <a href="#"><img className="card-img-top" src={movie.image} alt="" /></a>
+                        <Link href={`/movies/${movie.id}`}>
+                            <a><img className="card-img-top" src={movie.image} alt="" /></a>
+                        </Link>
                         <div className="card-body">
                             <h4 className="card-title">
-                                <a href="#">{movie.name}</a>
+                                <Link href={`/movies/${movie.id}`}>
+                                    <a>{movie.name}</a>
+                                </Link>
                             </h4>
                             <p className="card-text">{this.shorten(movie.description, 200)}</p>
                         </div>
@@ -38,7 +44,7 @@ class MovieList extends React.Component {
         const { movies } = this.props
         return (
             <React.Fragment>
-                { this.renderMovies(movies) }
+                { this.renderMovies(movies)}
             </React.Fragment>
         )
     }
