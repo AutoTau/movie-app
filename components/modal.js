@@ -1,18 +1,15 @@
+import { loadGetInitialProps } from "next/dist/next-server/lib/utils"
 
 
 
-
-const Modal = () => {
+const Modal = (props) => {
 
     let closeButton = null
-
 
     const submitModal = () => {
         alert('Submitting Modal')
         closeButton.click()
     }
-
-
 
     return (
         <div>
@@ -30,7 +27,7 @@ const Modal = () => {
                             </button>
                         </div>
                         <div className="modal-body">
-                        ......
+                        {props.children}
                         </div>
                         <div className="modal-footer">
                             <button ref={ele => closeButton = ele} type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
