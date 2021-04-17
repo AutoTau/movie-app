@@ -53,6 +53,16 @@ export const getCategories = () => {
   })
 }
 
+export const createMovie = (movie) => {
+  return new Promise((resolve, reject) => {
+    MOVIE_DATA.push(movie)
+    setTimeout(() => {
+      resolve(MOVIE_DATA) 
+      reject('Cannot fetch movie data!')
+    }, 50)
+  })
+}
+
 export const getMovies = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {

@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 
 
-const MovieCreateForm = () => {
+const MovieCreateForm = (props) => {
 
     const [form, setForm] = useState({
         name: "Some Movie",
@@ -21,7 +21,6 @@ const handleChange = (event) => {
 }
 
 const handleGenreChange = (event) => {
-
     const { options } = event.target
     const optionsLength = options.length
     let value = []
@@ -37,11 +36,12 @@ const handleGenreChange = (event) => {
     })
 }
 
-
+const submitForm = () => {
+    props.handleFormSubmit({...form})
+}
 
     return (
         <form>
-            { JSON.stringify(form) }
             <div className="form-group">
                 <label for="name">Name</label>
                 <input 
@@ -125,6 +125,7 @@ const handleGenreChange = (event) => {
                     <option>action</option>
                 </select>
             </div>
+            <button onClick={submitForm} type="button" className="btn btn-primary">Create</button>
         </form>
 
     )

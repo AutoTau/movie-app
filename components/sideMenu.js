@@ -1,14 +1,24 @@
 import {useState} from 'react'
 import Modal from './modal'
 import MovieCreateForm from './movieCreateForm'
+import { createMovie } from '../actions'
 
 // Containment of MovieCreateForm within Modal
 const SideMenu = (props) => {
   const { categories } = props
+
+  const handleCreateMovie = (movie) => {
+    createMovie(movie).then(() => {
+      console.log(JSON.stringify(movie))
+    })
+  }
+
+
+
   return (
     <div>
-      <Modal >
-        <MovieCreateForm />
+      <Modal hasSubmit={false}>
+        <MovieCreateForm handleFormSubmit={handleCreateMovie}/>
       </Modal>
       <h1 className="my-4">{props.appName}</h1>
       <div className="list-group">
