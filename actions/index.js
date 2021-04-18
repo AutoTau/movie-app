@@ -35,5 +35,5 @@ export const getMovieById = (id) => {
 }
 
 export const deleteMovie = (id) => {
-  return axios.delete(`${BASE_URL}/api/v1/movies/${id}`).then(res => res.data)
+  return 
 }
