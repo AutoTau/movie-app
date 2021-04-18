@@ -10,16 +10,15 @@ const Movie = (props) => {
 
     return (
         <div className="container">
-          {/* <h1>Movie with id: { id }</h1> */}
-          <div class="jumbotron">
-              <h1 class="display-4">{movie.name}</h1>
-              <p class="lead">{ movie.description }</p>
-              <hr class="my-4" />
+          <div className="jumbotron">
+              <h1 className="display-4">{movie.name}</h1>
+              <p className="lead">{ movie.description }</p>
+              <hr className="my-4" />
               <p>{ movie.genre }</p>
-              <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+              <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
           </div>
           <p className="desc-text">
-            { movie.longDescription }
+            { movie.longDesc }
           </p>
           <style jsx>{`
             .desc-text {

@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import {useRouter} from 'next/router'
 import Modal from './modal'
 import MovieCreateForm from './movieCreateForm'
 import { createMovie } from '../actions'
@@ -6,15 +7,15 @@ import { createMovie } from '../actions'
 // Containment of MovieCreateForm within Modal
 const SideMenu = (props) => {
   const { categories } = props
+  const router = useRouter()
   let modal = null
 
   const handleCreateMovie = (movie) => {
     createMovie(movie).then(() => {
-      console.log(JSON.stringify(movie))
       modal.closeModal()
+      router.push('/')
     })
   }
-
 
   return (
     <div>
