@@ -43,21 +43,13 @@
     "id": "r4m31"
   },
   {
-    "formData": {
-      "name": "",
-      "description": "",
-      "rating": "",
-      "image": "",
-      "cover": "",
-      "longDesc": ""
-    },
-    "name": "random",
-    "description": "random2",
-    "rating": "3",
+    "name": "random UPDATED!",
+    "description": "random2 UPDATED",
+    "rating": "3.5",
     "image": "https://images.unsplash.com/photo-1604975701397-6365ccbd028a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80",
     "cover": "https://images.unsplash.com/photo-1604975701397-6365ccbd028a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80",
-    "longDesc": "asdfasdf",
-    "genre": "adventure",
+    "longDesc": "asdfasdf UPDATED",
+    "genre": "music,adventure,historical",
     "id": "wsbsy"
   }
 ]
